@@ -61,5 +61,7 @@ public class LerCsv {
         System.out.println("\n O valor do contador2 é: "+contador2);
         //vamos la atualizar 
         //assim que der envio
+        //conseguindo adaptar com o git
+        
     }
 }
