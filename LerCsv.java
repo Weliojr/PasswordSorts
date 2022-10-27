@@ -17,7 +17,7 @@ public class LerCsv {
         String senha[] = new String [698878];
         int tamanhosenha[] = new int[698878];
         String data[] = new String[698878];
-        String arquivocsv = "/home/welio/Downloads/passwords.csv";
+        String arquivocsv = "passwords.csv";
         String path = "teste.csv";
         String[][] superarray = new String[698878][4];
         BufferedReader conteudocsv= null;
@@ -59,16 +59,23 @@ public class LerCsv {
         }
        int contador2 =0;
       //mergeSort(superarray);
-       while(superarray[contador2][0] != null){
-            //indice[contador2] = Integer.parseInt(superarray[contador2][0]);
+        while(superarray[contador2][0] != null){
+            indice[contador2] = Integer.parseInt(superarray[contador2][0]);
             senha[contador2] = superarray[contador2][1];
-            //tamanhosenha[contador2] = Integer.parseInt(superarray[contador2][2]);
+            tamanhosenha[contador2] = Integer.parseInt(superarray[contador2][2]);
             data[contador2] = superarray[contador2][3];
-            System.out.print(/*indice[contador2]+" "+*/senha[contador2]+" "+/*tamanhosenha[contador2]+" "+*/data[contador2]+" ");
+            System.out.print(indice[contador2]+" "+senha[contador2]+" "+tamanhosenha[contador2]+" "+data[contador2]+"\n");
             //System.out.print("\n");
             contador2++;
         }
-
+        
+       /*  while(superarray[contador2][0] != null){
+            indice[contador2] = Integer.parseInt(superarray[contador2][0]);
+            
+            System.out.print(superarray[contador2][0]+" "+superarray[contador2][1]+" "+superarray[contador2][2]+" "+superarray[contador2][3]+"\n");
+            //System.out.print("\n");
+            contador2++;
+        }*/
     }
     //ALGORITMO MERGE SORT
     public static void mergeSort(String[][] vetor) {
