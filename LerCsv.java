@@ -159,7 +159,7 @@ public class LerCsv {
             }
             contador2++;
         }
-    /*     tempoinicial = System.currentTimeMillis();
+        tempoinicial = System.currentTimeMillis();
         mergeSort(indice,senha,tamanhosenha,data);// okay
         criararray(indice, senha, tamanhosenha, data, mergemedio);
         tempofinal = System.currentTimeMillis()-tempoinicial;
@@ -175,9 +175,9 @@ public class LerCsv {
         criararray(indice, senha, tamanhosenha, data, mergemelhor);
         tempofinal = System.currentTimeMillis()-tempoinicial;
         System.out.println("Tempo  da ordenação (merge -melhor caso):" + tempofinal );
-        */
+        
 
-    /*     tempoinicial = System.currentTimeMillis();
+         tempoinicial = System.currentTimeMillis();
         quickmediana3(indice,senha,tamanhosenha, 0, (tamanhosenha.length-1),data);//okay
         criararray(indice, senha, tamanhosenha, data, quick3medio);
         tempofinal = System.currentTimeMillis()-tempoinicial;
@@ -192,10 +192,10 @@ public class LerCsv {
         quickmediana3(indice, senha, tamanhosenha, 0, (tamanhosenha.length-1), data);
          criararray(indice, senha, tamanhosenha, data, quick3melhor);
         tempofinal = System.currentTimeMillis()-tempoinicial;
-        System.out.println("Tempo  da ordenação (quick3 -melhor caso):" + tempofinal );*/
+        System.out.println("Tempo  da ordenação (quick3 -melhor caso):" + tempofinal );
 
 
-    /*     tempoinicial = System.currentTimeMillis();
+         tempoinicial = System.currentTimeMillis();
         mergeSortinvert(indice, senha, tamanhosenha, data);
         countingSort(indice,senha, tamanhosenha,data);//okay
         criararray(indice, senha, tamanhosenha, data, coutingmedio);
@@ -213,29 +213,97 @@ public class LerCsv {
         countingSort(indice,senha, tamanhosenha,data);
         tempofinal = System.currentTimeMillis()-tempoinicial;
         criararray(indice, senha, tamanhosenha, data, coutingmelhor);
-        System.out.println("Tempo  da ordenação (counting -melhor caso):" + tempofinal );*/
+        System.out.println("Tempo  da ordenação (counting -melhor caso):" + tempofinal );
         
         
         
-   /*      tempoinicial = System.currentTimeMillis();
+    tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
         insertionSort(indice,senha ,tamanhosenha,data);// okAY
         criararray(indice, senha, tamanhosenha, data, insertionmedio);
         tempofinal = System.currentTimeMillis()-tempoinicial;
         System.out.println("Tempo  da ordenação (insertion -medio caso e ja com o csv feito):" + tempofinal );
         tempoinicial = System.currentTimeMillis();
         mergeSortinvert(indice, senha, tamanhosenha, data);
+        mergeSort(indice, senha, tamanhosenha, data);
         insertionSort(indice,senha ,tamanhosenha,data);// okAY
         criararray(indice, senha, tamanhosenha, data, insertionpior);
         tempofinal = System.currentTimeMillis()-tempoinicial;
         System.out.println("Tempo  da ordenação (insertion -pior caso e ja com o csv feito):" + tempofinal );
+        tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
         insertionSort(indice,senha ,tamanhosenha,data);// okAY
         criararray(indice, senha, tamanhosenha, data, insertionmelhor);
         tempofinal = System.currentTimeMillis()-tempoinicial;
         System.out.println("Tempo  da ordenação (insertion -melhor caso e ja com o csv feito):" + tempofinal );
-        tempoinicial = System.currentTimeMillis();*/
+    
+
+       /* tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
+        insertionSort(indice,senha ,tamanhosenha,data);// okAY
+        criararray(indice, senha, tamanhosenha, data, insertionmedio);
+        tempofinal = System.currentTimeMillis()-tempoinicial;
+       // System.out.println("Tempo  da ordenação (insertion -medio caso e ja com o csv feito):" + tempofinal );
+        tempoinicial = System.currentTimeMillis();
+        mergeSortinvert(indice, senha, tamanhosenha, data);
+        mergeSort(indice, senha, tamanhosenha, data);
+        insertionSort(indice,senha ,tamanhosenha,data);// okAY
+        criararray(indice, senha, tamanhosenha, data, insertionpior);
+        tempofinal = System.currentTimeMillis()-tempoinicial;
+        //System.out.println("Tempo  da ordenação (insertion -pior caso e ja com o csv feito):" + tempofinal );
+        tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
+        insertionSort(indice,senha ,tamanhosenha,data);// okAY
+        criararray(indice, senha, tamanhosenha, data, insertionmelhor);
+        tempofinal = System.currentTimeMillis()-tempoinicial;
+       // System.out.println("Tempo  da ordenação (insertion -melhor caso e ja com o csv feito):" + tempofinal );
+    */
+
+
        // System.out.println(tamanhosenha);
-       //tempoinicial = System.currentTimeMillis();
-        //selectionSort(tamanhosenha);//okay
+        tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
+        selectionSort(indice,senha,tamanhosenha, data);//okay
+        criararray(indice, senha, tamanhosenha, data, selectionmedio);
+        tempofinal = System.currentTimeMillis() - tempoinicial;
+        System.out.println("Tempo  da ordenação (selection -medio caso e ja com o csv feito): "+ tempofinal);
+        tempoinicial = System.currentTimeMillis();
+        mergeSortinvert(indice, senha, tamanhosenha, data);
+        mergeSort(indice, senha, tamanhosenha, data);
+        selectionSort(indice,senha,tamanhosenha, data);//okay
+        criararray(indice, senha, tamanhosenha, data, selectionpior);
+        tempofinal = System.currentTimeMillis() - tempoinicial;
+        System.out.println("Tempo  da ordenação (selection -pior caso e ja com o csv feito): "+ tempofinal);
+        tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
+        selectionSort(indice,senha,tamanhosenha, data);//okay
+        criararray(indice, senha, tamanhosenha, data, selectionmelhor);
+        tempofinal = System.currentTimeMillis() - tempoinicial;
+        System.out.println("Tempo  da ordenação (selection -merlhor caso e ja com o csv feito): "+ tempofinal);
+
+
+        /*tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
+        selectionSort(indice,senha,tamanhosenha, data);//okay
+        criararray(indice, senha, tamanhosenha, data, selectionmedio);
+        tempofinal = System.currentTimeMillis() - tempoinicial;
+        //System.out.println("Tempo  da ordenação (selection -medio caso e ja com o csv feito): "+ tempofinal);
+        tempoinicial = System.currentTimeMillis();
+        mergeSortinvert(indice, senha, tamanhosenha, data);
+        mergeSort(indice, senha, tamanhosenha, data);
+        selectionSort(indice,senha,tamanhosenha, data);//okay
+        criararray(indice, senha, tamanhosenha, data, selectionpior);
+        tempofinal = System.currentTimeMillis() - tempoinicial;
+       // System.out.println("Tempo  da ordenação (selection -pior caso e ja com o csv feito): "+ tempofinal);
+        tempoinicial = System.currentTimeMillis();
+        mergeSort(indice, senha, tamanhosenha, data);
+        selectionSort(indice,senha,tamanhosenha, data);//okay
+        criararray(indice, senha, tamanhosenha, data, selectionmelhor);
+        tempofinal = System.currentTimeMillis() - tempoinicial;
+       // System.out.println("Tempo  da ordenação (selection -merlhor caso e ja com o csv feito): "+ tempofinal);*/
+      
+      
+      
         tempoinicial = System.currentTimeMillis();
         quickSort(indice,senha,tamanhosenha, 0, (tamanhosenha.length-1),data);//okay
         criararray(indice, senha, tamanhosenha, data, quickmedio);
@@ -252,13 +320,13 @@ public class LerCsv {
         criararray(indice, senha, tamanhosenha, data, quickmelhor);
         tempofinal = System.currentTimeMillis()-tempoinicial;
         System.out.println("Tempo  da ordenação (quick -melhor caso):" + tempofinal );
-        //quickSort(indice,senha,tamanhosenha, 0, (tamanhosenha.length-1),data);//
+        
         //contador2=0;
        //while(indice[contador2]!=669878){
       //   System.out.println(senha[contador2]);
        //     contador2++;
       //  }
-     /**/ 
+      
     tempoinicial = System.currentTimeMillis();
     mergeSortinvert(indice, senha, tamanhosenha, data);
     for(int i = tamanhosenha.length / 2 - 1; i >= 0; i--){
@@ -525,10 +593,10 @@ public class LerCsv {
             int pivo = vetor[i];
             int j = i - 1;
             while (j >= 0 && vetor[j] < pivo) {
-                vetor0[j+1] = vetor0[j];
-                vetor2[j+1] = vetor2[j];
+               // vetor0[j+1] = vetor0[j];
+               // vetor2[j+1] = vetor2[j];
                 vetor[j+1] = vetor[j];
-                vetor3[j+1] = vetor3[j];
+               // vetor3[j+1] = vetor3[j];
                 j = j - 1;
             }
             vetor[j + 1] = pivo;
@@ -549,22 +617,22 @@ public class LerCsv {
                     min = j;
                 }
             }
-            //troca no array indice
+            /*troca no array indice
             aux0 = vetor0[i];
             vetor0[i] = vetor0[min];
-            vetor0[min] = aux0;
-            // troca no array senha
+            vetor0[min] = aux0;*/
+            /*troca no array senha
             aux2 = vetor2[i];
             vetor2[i] = vetor2[min];
-            vetor2[min] = aux2;
+            vetor2[min] = aux2;*/
             //troca no array tamanho
             auxiliar = vetor[i];
             vetor[i] = vetor[min];
             vetor[min] = auxiliar;
-            //troca no array data
+            /*troca no array data
             aux3 = vetor3[i];
             vetor3[i] = vetor3[min];
-            vetor3[min] = aux3;
+            vetor3[min] = aux3;*/
         }
         
 	}
