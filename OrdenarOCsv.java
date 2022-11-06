@@ -1,17 +1,19 @@
+import java.util.Arrays;
+
 public class OrdenarOCsv {
     public static void selectionSort(int[] vetor) {
-		int arraycopiaselection[] = vetor.clone();
+		
         int auxiliar =0;
-        for (int i = 0; i < arraycopiaselection.length; i++) {
+        for (int i = 0; i < vetor.length; i++) {
             int min = i;
-            for (int j = i + 1; j < arraycopiaselection.length; j++) {
-                if (arraycopiaselection[j] < arraycopiaselection[min]) {
+            for (int j = i + 1; j < vetor.length; j++) {
+                if (vetor[j] < vetor[min]) {
                     min = j;
                 }
             }
-            auxiliar = arraycopiaselection[i];
-            arraycopiaselection[i] = arraycopiaselection[min];
-            arraycopiaselection[min] = auxiliar;
+            auxiliar = vetor[i];
+            vetor[i] = vetor[min];
+            vetor[min] = auxiliar;
         }
         
 	}
@@ -113,6 +115,41 @@ public class OrdenarOCsv {
             vector[j] = aux;
         }
     }
+    //quicksot mediana de 3
+    public static void quickmediana3(int[] vetor, int esq, int dir) {
+        int arraycopiaquick[] = vetor.clone();
+        if (esq < dir) {
+            int p = particao(arraycopiaquick, esq, dir);
+            quickSort(arraycopiaquick, esq, p);
+            quickSort(arraycopiaquick, p + 1, dir);
+        }
+       
+    }
+    //Algoritmo para o quicksort
+	public static int particaode3(int[] vector, int esq, int dir){
+        int centro= (int) (esq + dir) / 2;
+        int medi3[] = new int[3];
+        medi3[0] = vector[esq];
+        medi3[1] = vector[centro];
+        medi3[2] = vector[dir];
+        Arrays.sort(medi3);
+
+        int pivot = medi3[1];
+        int i = esq - 1;
+        int j = dir + 1;
+        while(true){
+            do{ i++;
+            }while(vector[i] < pivot);
+            do{j--;
+            }while(vector[j] > pivot);
+            if (i >= j){
+            return j;
+            }
+            int aux = vector[i];
+            vector[i] = vector[j];
+            vector[j] = aux;
+        }
+    }
 
 	//ALGORITMO COUNTING SORT
     public static void countingSort(int[] vetor) {
@@ -146,7 +183,7 @@ public class OrdenarOCsv {
             }
 
         }
-       
         
     }
+    
 }
